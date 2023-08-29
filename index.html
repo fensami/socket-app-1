@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Socekt io</title>
+</head>
+<body>
+
+
+<!--<input type="text" id="name">-->
+<input type="email" name="email" placeholder="email" id="email">
+<button onclick="send()" id="send">Send</button>
+
+<!--server to clinet data transfer-->
+<!--<h1 id="myTime"></h1>-->
+
+<h1 id="msg"></h1>
+
+
+<!--This is the connection socet server-->
+<script src="/socket.io/socket.io.js"></script>
+
+
+
+
+<script>
+
+<!-- Broadcast -->
+let socket = io()
+
+socket.on('myBroadcast', function (data) {
+    document.getElementById('msg').innerHTML=data
+})
+
+<!--    basic rules-->
+ // let socket =io()
+ //    function send() {
+ //        let name =document.getElementById('name').value;
+ //        // console.log(name)
+ //        // alert(name)
+ //        socket.send(name)
+ //    }
+
+ // let socket =io();
+ // function send() {
+
+
+ //     let email = document.getElementById('email').value;
+ //      socket.emit('myEvent', email)
+ //     // alert(email)
+ //     // socket.send(email)
+ // }
+    // let socket = io();
+    //Send method theke data ashce
+    // socket.on('message', function (msg){
+    //     document.getElementById('myTime').innerHTML=''
+    //
+    //     document.getElementById('myTime').innerHTML=msg
+    // })
+
+    //custom method theke data ashce
+    // server to client data transfer
+    // socket.on('myEvent', function (msg){
+    //     document.getElementById('myTime').innerHTML=''
+    //
+    //     document.getElementById('myTime').innerHTML=msg
+    // })
+    // socket.on('message', function (msg){
+    //     document.write(msg)
+    // })
+
+    //practice
+    // socket.on('message', function (message) {
+    //     document.write(message)
+    // })
+</script>
+</body>
+</html>
